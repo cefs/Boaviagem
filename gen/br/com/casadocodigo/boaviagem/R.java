@@ -32,16 +32,17 @@ public final class R {
         public static final int novo_gasto=0x7f070000;
         public static final int orcamento=0x7f070011;
         public static final int quantidadePessoas=0x7f070012;
-        public static final int senha=0x7f07000b;
-        public static final int tipoViagem=0x7f07000c;
-        public static final int usuario=0x7f07000a;
+        public static final int senha=0x7f07000c;
+        public static final int tipoViagem=0x7f07000a;
+        public static final int usuario=0x7f07000b;
         public static final int valor=0x7f070006;
     }
     public static final class layout {
         public static final int dashboard=0x7f030000;
         public static final int gasto=0x7f030001;
-        public static final int login=0x7f030002;
-        public static final int viagem=0x7f030003;
+        public static final int lista_viagem=0x7f030002;
+        public static final int login=0x7f030003;
+        public static final int viagem=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f040000;
