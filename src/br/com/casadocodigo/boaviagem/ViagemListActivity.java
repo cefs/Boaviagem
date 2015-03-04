@@ -28,10 +28,17 @@ public class ViagemListActivity extends ListActivity
 		viagens  = new  ArrayList<Map<String, Object>>();
 		
 		Map<String, Object> item = new HashMap<String, Object>();
-		item.put("imagem", R.drawable.negocio);
+		item.put("imagem", R.drawable.negocios);
 		item.put("destino", "São Paulo");
 		item.put("data", "02/02/2012 a 04/02/2012");
 		item.put("total", "Gasto total de R$ 314,98");
+		viagens.add(item);
+		
+		Map<String, Object> item2 = new HashMap<String, Object>();
+		item2.put("imagem", R.drawable.lazer);
+		item2.put("destino", "São Paulo");
+		item2.put("data", "02/02/2012 a 04/02/2012");
+		item2.put("total", "Gasto total de R$ 314,98");
 		viagens.add(item);
 		
 		return viagens;
