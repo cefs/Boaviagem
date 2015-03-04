@@ -32,7 +32,6 @@ public class ViagemListActivity extends ListActivity
 		item.put("destino", "São Paulo");
 		item.put("data", "02/02/2012 a 04/02/2012");
 		item.put("total", "Gasto total de R$ 314,98");
-		viagens.add(item);
 		
 		Map<String, Object> item2 = new HashMap<String, Object>();
 		item2.put("imagem", R.drawable.lazer);
@@ -40,6 +39,7 @@ public class ViagemListActivity extends ListActivity
 		item2.put("data", "02/02/2012 a 04/02/2012");
 		item2.put("total", "Gasto total de R$ 314,98");
 		viagens.add(item);
+		viagens.add(item2);
 		
 		return viagens;
 	}
