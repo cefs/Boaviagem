@@ -54,7 +54,22 @@ public class GastoListActivity extends ListActivity
 		item.put("descricao", "Diária Hotel");
 		item.put("valor", "R$ 260,00");
 		item.put("categoria", R.color.categoria_hospedagem);
+		
+		Map<String, Object> item2 = new HashMap<String, Object>();
+		item2.put("data", "04/02/2013");
+		item2.put("descricao", "Tapioca");
+		item2.put("valor", "R$ 2,00");
+		item2.put("categoria", R.color.categoria_alimentacao);
+		
+		Map<String, Object> item3 = new HashMap<String, Object>();
+		item3.put("data", "04/02/2013");
+		item3.put("descricao", "Táxi");
+		item3.put("valor", "R$ 25,00");
+		item3.put("categoria", R.color.categoria_transporte);
+		
 		gastos.add(item);
+		gastos.add(item2);
+		gastos.add(item3);
 		
 		return gastos;
 	}
