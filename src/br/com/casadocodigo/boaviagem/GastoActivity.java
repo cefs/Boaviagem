@@ -7,11 +7,15 @@ import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class GastoActivity extends Activity {
 
@@ -30,14 +34,27 @@ public class GastoActivity extends Activity {
 
 		dataGasto = (Button) findViewById(R.id.data);
 		dataGasto.setText(dia + "/" + (mes + 1) + "/" + ano);
-		
+
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-				this, R.array.categoria_gasto, 
+				this, R.array.categoria_gasto,
 				android.R.layout.simple_spinner_item);
-		categoria = (Spinner) findViewById(R.id.categoria); 
+		categoria = (Spinner) findViewById(R.id.categoria);
 		categoria.setAdapter(adapter);
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.gasto_menu, menu);
+		return true;		
+	}
+	
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {		
+		Toast.makeText(this, "Em breve!", Toast.LENGTH_LONG).show();
+		return true;
+	}
+	
 	public void selecionarData(View view) {
 		showDialog(view.getId());
 	}
