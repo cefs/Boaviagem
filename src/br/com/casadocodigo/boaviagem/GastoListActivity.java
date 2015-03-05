@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.SimpleAdapter;
 import android.widget.SimpleAdapter.ViewBinder;
@@ -34,6 +40,8 @@ public class GastoListActivity extends ListActivity
 		
 		setListAdapter(adapter);
 		getListView().setOnItemClickListener(this);
+		
+		registerForContextMenu(getListView());
  	}
 	
 	@Override
@@ -99,5 +107,26 @@ public class GastoListActivity extends ListActivity
 	            }
 	            return false;
 		}
+	}
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.gasto_menu, menu);
+	}
+
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		if (item.getItemId() == R.id.remover) {
+			AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.
+					getMenuInfo();
+			gastos.remove(info.position);
+			getListView().invalidateViews();
+			dataAnterior = "";
+			//remover do banco
+			return true;
+		}
+		return super.onContextItemSelected(item);
 	}
 }
