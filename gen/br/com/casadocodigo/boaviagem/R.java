@@ -30,26 +30,27 @@ public final class R {
         public static final int novo_gasto_48x48=0x7f020006;
     }
     public static final class id {
+        public static final int barraProgresso=0x7f09000b;
         public static final int categoria=0x7f090004;
         public static final int configuracoes=0x7f090003;
         public static final int data=0x7f090007;
-        public static final int dataChegada=0x7f09000f;
-        public static final int dataSaida=0x7f090010;
+        public static final int dataChegada=0x7f090010;
+        public static final int dataSaida=0x7f090011;
         public static final int descricao=0x7f090008;
         public static final int destino=0x7f090005;
-        public static final int lazer=0x7f09000d;
+        public static final int lazer=0x7f09000e;
         public static final int local=0x7f090009;
         public static final int minhas_viagens=0x7f090002;
-        public static final int negocios=0x7f09000e;
+        public static final int negocios=0x7f09000f;
         public static final int nova_viagem=0x7f090001;
         public static final int novo_gasto=0x7f090000;
-        public static final int orcamento=0x7f090011;
-        public static final int quantidadePessoas=0x7f090012;
-        public static final int remover=0x7f090014;
-        public static final int sair=0x7f090013;
-        public static final int senha=0x7f09000c;
+        public static final int orcamento=0x7f090012;
+        public static final int quantidadePessoas=0x7f090013;
+        public static final int remover=0x7f090015;
+        public static final int sair=0x7f090014;
+        public static final int senha=0x7f09000d;
         public static final int tipoViagem=0x7f09000a;
-        public static final int usuario=0x7f09000b;
+        public static final int usuario=0x7f09000c;
         public static final int valor=0x7f090006;
     }
     public static final class layout {
