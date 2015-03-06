@@ -20,6 +20,7 @@ import android.widget.Toast;
 public class ViagemListActivity extends ListActivity implements
 		OnItemClickListener, OnClickListener {
 	private AlertDialog alertDialog;
+	private AlertDialog dialogConfirmacao;
 	private int viagemSelecionada;
 	@Override
 	public void onClick(DialogInterface dialog, int item) {
@@ -34,11 +35,15 @@ public class ViagemListActivity extends ListActivity implements
 			startActivity(new Intent(this, GastoListActivity.class));
 			break;
 		case 3:
+			dialogConfirmacao.show();
+			break;
+		case DialogInterface.BUTTON_POSITIVE:
 			viagens.remove(this.viagemSelecionada);
 			getListView().invalidateViews();
-			break;			
-		default:
 			break;
+		case DialogInterface.BUTTON_NEGATIVE:			
+			dialogConfirmacao.dismiss();
+			break;									
 		}
 	}
 
@@ -54,7 +59,16 @@ public class ViagemListActivity extends ListActivity implements
 
 		return builder.create();
 	}
+	
+	private AlertDialog criaDialogConfirmacao() {		
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage(R.string.confirma_exclusao_viagem);
+		builder.setPositiveButton(getString(R.string.sim), this);
+		builder.setNegativeButton(getString(R.string.nao), this);
 
+		return builder.create();
+	}
+	
 	private List<Map<String, Object>> viagens;
 
 	private List<Map<String, Object>> listarViagens() {
@@ -90,6 +104,7 @@ public class ViagemListActivity extends ListActivity implements
 		getListView().setOnItemClickListener(this);
 
 		this.alertDialog = criaAlertaDialog();
+		this.dialogConfirmacao = criaDialogConfirmacao(); 
 	}
 
 	@Override

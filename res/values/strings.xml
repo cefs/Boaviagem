@@ -33,6 +33,9 @@
     <string name="gastos_realizados">Gastos Realizados</string>
     <string name="editar">Editar</string>
     <string name="opcoes">Opções</string>
+    <string name="confirma_exclusao_viagem">Confirmação Exclusão</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
 
     <string-array name="categoria_gasto">
         <item>Alimentação</item>
